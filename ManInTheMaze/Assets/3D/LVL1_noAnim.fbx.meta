@@ -3,7 +3,37 @@ guid: 779601e8aa07862499608fee1548da00
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Estudo_palette_Maya
+    second: {fileID: 2800000, guid: fd9256887500d074782b88f4451148de, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Plastic003_4K_Color
+    second: {fileID: 2800000, guid: c6a1f1587b5292343bf15a837950ef33, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TV_Screen
+    second: {fileID: 2800000, guid: 3443a0e8f534cfc4a8f8013d9b9f79e8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: WOOD_MARBLE
+    second: {fileID: 2800000, guid: 3b8b62b9e82c44e4594422d17e0fb3ea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood_025_basecolor
+    second: {fileID: 2800000, guid: 223cf62cf15ca9843a3172682ab40b11, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood_025_roughness
+    second: {fileID: 2800000, guid: 2d8e706eb7009b64381505778a251ed0, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

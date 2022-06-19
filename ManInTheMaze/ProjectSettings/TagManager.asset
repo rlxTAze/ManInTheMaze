@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - inimigo
+  - jogador
+  - labirinto
+  - mola
+  - colectavel
+  - colectavel_2
+  - respawn_after_col1
+  - colectavel_lab
+  - respawn_after_lab
+  - lvl_4
   layers:
   - Default
   - TransparentFX
@@ -11,9 +21,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - whatIsGround
+  - whatIsEnemy
+  - whatIsPlayer
   - 
   - 
   - 

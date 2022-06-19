@@ -3,7 +3,32 @@ guid: ee204237cbd45654992f471866bd6ff7
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ground054_4K_Color
+    second: {fileID: 2800000, guid: f8f9732452a1d66418c054837e75f580, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ground054_4K_Displacement
+    second: {fileID: 2800000, guid: 7ba773bf785f3bd48b7b1258001c1504, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LUA_NASA
+    second: {fileID: 2800000, guid: 550e551577c91eb4e8b8f51959ed3cac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Plastic003_4K_Color
+    second: {fileID: 2800000, guid: c23d82df8838fad4d8ea2975e3bfa51b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood013_4K_Color
+    second: {fileID: 2800000, guid: 03325aae7e10b7846b64a453f3d600b8, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
