@@ -67,6 +67,10 @@ public class PlayerManager : MonoBehaviour
             //print(playerHP);
             
         }
+        if (other.CompareTag("Vitoria")){
+
+            SceneManager.LoadScene("Win");
+        }
         if (other.CompareTag("Respawn"))
         {
             //isGameOver = true;

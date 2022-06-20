@@ -1,14 +1,17 @@
 fileFormatVersion: 2
-guid: 17b5b3d3e1b9cf34681c4896d70ccb0f
+guid: a62a8c0965c1c2d41b89a61d05cef4a0
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: parada_nave
+    second: Inicio_stop
   - first:
-      74: -4843669224126908353
-    second: Move_nave
+      74: -6259943361545714808
+    second: Nave_move
+  - first:
+      74: 1129986093905256502
+    second: Fim_Trip
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -38,11 +41,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: parada_nave
+      name: Inicio_stop
       takeName: Take 001
       internalID: 0
-      firstFrame: 1016
-      lastFrame: 1017
+      firstFrame: 1096
+      lastFrame: 1097
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -65,9 +68,9 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 900
+      additiveReferencePoseFrame: 1096
     - serializedVersion: 16
-      name: Move_nave
+      name: Nave_move
       takeName: Take 001
       internalID: 0
       firstFrame: 1349
@@ -94,7 +97,36 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 900
+      additiveReferencePoseFrame: 1096
+    - serializedVersion: 16
+      name: Fim_Trip
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 2095
+      lastFrame: 2096
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1096
     isReadable: 0
   meshes:
     lODScreenPercentages: []

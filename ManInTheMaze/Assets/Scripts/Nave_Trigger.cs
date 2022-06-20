@@ -11,7 +11,7 @@ public class Nave_Trigger : MonoBehaviour
 
             //myDoor.Play(doorOpen, 0, 0.0f);
         //}
-        GetComponent<Animator> ().Play ("Move_nave");
+        GetComponent<Animator> ().Play ("Nave_move");
         
 
     }

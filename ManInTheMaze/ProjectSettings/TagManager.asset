@@ -28,6 +28,7 @@ TagManager:
   - Space_ambience
   - Spawn_lvl2
   - GM
+  - Vitoria
   layers:
   - Default
   - TransparentFX

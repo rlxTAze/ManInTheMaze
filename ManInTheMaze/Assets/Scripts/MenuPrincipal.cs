@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class MenuPrincipal : MonoBehaviour
 {
 
@@ -14,11 +15,14 @@ public class MenuPrincipal : MonoBehaviour
         painelCreditos.SetActive(false);
         painelMenu.SetActive(true);
     }
+    public void CarregaMenu (int ManInTheMaze){
+        SceneManager.LoadScene("ManInTheMaze");
 
-    public void CarregaMenu(int ManInTheMaze)
-    {
-        SceneManager.LoadScene(ManInTheMaze);
     }
+    //public void Playgame() {
+      //  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+
+    //}
 
     public void Creditos()
     {
