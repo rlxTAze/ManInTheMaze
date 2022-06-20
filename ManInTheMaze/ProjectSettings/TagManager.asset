@@ -27,6 +27,7 @@ TagManager:
   - Corredores_1
   - Space_ambience
   - Spawn_lvl2
+  - GM
   layers:
   - Default
   - TransparentFX

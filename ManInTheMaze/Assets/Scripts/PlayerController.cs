@@ -47,13 +47,13 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        
         characterController = GetComponent<CharacterController>();
         player.GetComponent<CharacterController>().enabled = false;
-        player.transform.position = respawnPoint.transform.position;
+        // player.transform.position = respawnPoint.transform.position;
         player.GetComponent<CharacterController>().enabled = true;
         animator = GetComponent<Animator>();
-        Debug.Log("jogador"+ player.transform.position);
-        Debug.Log("respawn" +respawnPoint.transform.position);
+        //Debug.Log("jogador"+ player.transform.position);
 
     }
 
@@ -62,8 +62,6 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Rotate();
-
-
     }
 
 
@@ -143,7 +141,7 @@ public class PlayerController : MonoBehaviour
 
             respawnPoint.transform.position = Spawn_lvl2.transform.position;
             Debug.Log("spawnlvl2"+ Spawn_lvl2.position);
-            Debug.Log("respawnpoint1"+ respawnPoint.position);
+            //Debug.Log("respawnpoint1"+ respawnPoint.position);
 
         }
         //Debug.Log("isto est� a funcionar");
