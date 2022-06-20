@@ -24,6 +24,9 @@ TagManager:
   - space_sound
   - Door_ranger
   - Slide_door
+  - Corredores_1
+  - Space_ambience
+  - Spawn_lvl2
   layers:
   - Default
   - TransparentFX

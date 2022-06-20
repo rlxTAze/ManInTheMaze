@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     public AudioSource walkNoise;
     public AudioSource jumpNoise;
-    public AudioSource Morte;
+    
 
     private Vector2 moveVector;
     private Vector2 lookVector;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController characterController;
     private Animator animator;
-
+    [SerializeField] Transform Spawn_lvl2;
     [SerializeField] Transform respawnPoint_3;
 
     void Start()
@@ -139,6 +139,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Spawn_lvl2")){
+
+            respawnPoint.transform.position = Spawn_lvl2.transform.position;
+            Debug.Log("spawnlvl2"+ Spawn_lvl2.position);
+            Debug.Log("respawnpoint1"+ respawnPoint.position);
+
+        }
         //Debug.Log("isto est� a funcionar");
         if (other.tag == "lvl_4")
         {

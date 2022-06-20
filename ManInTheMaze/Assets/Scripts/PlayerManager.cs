@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     public Text playerHPText;
 
     [SerializeField] GameObject proj;
-
+    public AudioSource Death;
     private CharacterController characterController;
     private Animator animator;
     //[SerializeField] Transform porta;
@@ -35,9 +35,11 @@ public class PlayerManager : MonoBehaviour
         playerHPText.text = "HP:" + playerHP;
         if (isGameOver)
         {
+            
             SceneManager.LoadScene("ManInTheMaze");
            // Debug.Log(player.transform.position);
             playerHP = 100;
+            
         }
 
     }
@@ -47,7 +49,11 @@ public class PlayerManager : MonoBehaviour
         playerHP -= damageAmount;
         if (playerHP <= 0)
         {
+            
             isGameOver = true;
+            Death.Play();
+            
+            
         }
     }
 
@@ -58,12 +64,17 @@ public class PlayerManager : MonoBehaviour
         if (other.gameObject.tag == "inimigo")
         {
             TakeDamage(15);
-            print(playerHP);
+            //print(playerHP);
             
         }
-        if (other.gameObject.tag == "Respawn")
+        if (other.CompareTag("Respawn"))
         {
-            isGameOver = true;
+            //isGameOver = true;
+            TakeDamage(100);
+            //Debug.Log("hp"+ playerHP);
+            other.GetComponent<AudioSource>().Play();
+            
+            
         }
         if (other.CompareTag("colectavel"))
         {
@@ -99,7 +110,17 @@ public class PlayerManager : MonoBehaviour
             animator = GetComponent<Animator>();
             
         }
+        if (other.CompareTag("Space_ambience"))
+        {
+            other.GetComponent<AudioSource>().Play();
+
+        }
         if (other.CompareTag("Slide_door"))
+        {
+            other.GetComponent<AudioSource>().Play();
+
+        }
+        if (other.CompareTag("Corredores_1"))
         {
             other.GetComponent<AudioSource>().Play();
 
@@ -121,7 +142,16 @@ public class PlayerManager : MonoBehaviour
 } 
     private void OnTriggerExit(Collider other){
 
-    
+        if (other.CompareTag("Corredores_1"))
+        {
+            other.GetComponent<AudioSource>().Stop();
+
+        }
+          if (other.CompareTag("Space_ambience"))
+        {
+            other.GetComponent<AudioSource>().Stop();
+
+        }
          if (other.CompareTag("Door_ranger"))
         {
             other.GetComponent<AudioSource>().Play();

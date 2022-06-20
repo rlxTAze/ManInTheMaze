@@ -18,7 +18,7 @@ public class Trigger_Animations : MonoBehaviour
             //myDoor.Play(doorOpen, 0, 0.0f);
         //}
         GetComponent<Animator> ().Play ("abrir");
-        GetComponent<Animator> ().Play ("Open_Sideways");
+        
 
 
     }
