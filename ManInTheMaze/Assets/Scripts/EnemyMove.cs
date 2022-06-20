@@ -80,7 +80,7 @@ public class EnemyMove : MonoBehaviour
     }
     private void AttackPlayer()
     {
-        agent.SetDestination(transform.position);
+        //agent.SetDestination(transform.position);
 
         transform.LookAt(jogador);
 

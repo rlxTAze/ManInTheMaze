@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
 
     public AudioSource walkNoise;
     public AudioSource jumpNoise;
+    public AudioSource Morte;
 
     private Vector2 moveVector;
     private Vector2 lookVector;
@@ -51,6 +52,8 @@ public class PlayerController : MonoBehaviour
         player.transform.position = respawnPoint.transform.position;
         player.GetComponent<CharacterController>().enabled = true;
         animator = GetComponent<Animator>();
+        Debug.Log("jogador"+ player.transform.position);
+        Debug.Log("respawn" +respawnPoint.transform.position);
 
     }
 
@@ -64,10 +67,10 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void OnMove(InputAction.CallbackContext context) //método que lê os inputs 
+    public void OnMove(InputAction.CallbackContext context) //mï¿½todo que lï¿½ os inputs 
     {
         moveVector = context.ReadValue<Vector2>();
-        if (moveVector.magnitude > 0) //magnitude é a distância entre a origem do vetor e o final (se a personagem estiver parada (=0), não vai ativar o isWalking)
+        if (moveVector.magnitude > 0) //magnitude ï¿½ a distï¿½ncia entre a origem do vetor e o final (se a personagem estiver parada (=0), nï¿½o vai ativar o isWalking)
         {
             animator.SetBool("isWalking", true);
             walkNoise.Play();
@@ -85,7 +88,7 @@ public class PlayerController : MonoBehaviour
 
         if (characterController.isGrounded && verticalVelocity < 0)
         {
-            verticalVelocity = -0.1f * gravity * Time.deltaTime; //sempre que o jogador está no chão, é possivel saltar; se verticalvelocity=0, às vezes não funciona
+            verticalVelocity = -0.1f * gravity * Time.deltaTime; //sempre que o jogador estï¿½ no chï¿½o, ï¿½ possivel saltar; se verticalvelocity=0, ï¿½s vezes nï¿½o funciona
         }
 
         Vector3 move = transform.right * moveVector.x + transform.forward * moveVector.y + transform.up * verticalVelocity;
@@ -97,7 +100,7 @@ public class PlayerController : MonoBehaviour
         lookVector = context.ReadValue<Vector2>();
     }
 
-    private void Rotate() //o que faz rodar a câmara. como é terceira pessoa não é preciso olhar para cima e baixo
+    private void Rotate() //o que faz rodar a cï¿½mara. como ï¿½ terceira pessoa nï¿½o ï¿½ preciso olhar para cima e baixo
     {
       rotation.y += lookVector.x * lookSensitivity * Time.deltaTime;
       transform.localEulerAngles = rotation; //roda o jogador no axis y baseado onde o utilizador posiciona o rato
@@ -106,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
     public void onJump(InputAction.CallbackContext context)
     {
-        if (characterController.isGrounded && context.performed)   //context.performed é para verificar se a tecla 'espaço' foi premida
+        if (characterController.isGrounded && context.performed)   //context.performed ï¿½ para verificar se a tecla 'espaï¿½o' foi premida
         {
             animator.Play("Jumping");
             jumpNoise.Play();
@@ -116,15 +119,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void MenuPausa(InputAction.CallbackContext context)
-    {
-        if (context.performed) 
-        {
-            Debug.Log("cliquei esc");
-            //codigo menu
-        }
-
-    }
 
     private void Jump()
     {
@@ -145,7 +139,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("isto está a funcionar");
+        //Debug.Log("isto estï¿½ a funcionar");
         if (other.tag == "lvl_4")
         {
 

@@ -14,6 +14,16 @@ TagManager:
   - colectavel_lab
   - respawn_after_lab
   - lvl_4
+  - Porta_madeira
+  - respawn_after_tv
+  - TV_TP
+  - Television_teleportation
+  - Televisao_acionador
+  - Som_Natureza
+  - biblio_som
+  - space_sound
+  - Door_ranger
+  - Slide_door
   layers:
   - Default
   - TransparentFX
@@ -24,8 +34,8 @@ TagManager:
   - whatIsGround
   - whatIsEnemy
   - whatIsPlayer
-  - 
-  - 
+  - Room_1
+  - Plat_Nave
   - 
   - 
   - 

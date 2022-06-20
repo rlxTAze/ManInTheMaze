@@ -5,7 +5,10 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Take 001
+    second: parada_nave
+  - first:
+      74: -4843669224126908353
+    second: Move_nave
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,11 +38,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: parada_nave
       takeName: Take 001
       internalID: 0
-      firstFrame: 94
-      lastFrame: 610
+      firstFrame: 1016
+      lastFrame: 1017
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -62,7 +65,36 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 94
+      additiveReferencePoseFrame: 900
+    - serializedVersion: 16
+      name: Move_nave
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 1349
+      lastFrame: 2094
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 900
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -126,7 +158,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

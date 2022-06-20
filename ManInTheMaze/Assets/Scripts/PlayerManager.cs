@@ -16,10 +16,11 @@ public class PlayerManager : MonoBehaviour
 
     private CharacterController characterController;
     private Animator animator;
-
-   [SerializeField] Transform player;
+    //[SerializeField] Transform porta;
+    [SerializeField] Transform player;
     [SerializeField] Transform respawnPoint_2;
     [SerializeField] Transform respawnPoint_3; //depois labirinto
+    [SerializeField] Transform respawnPoint_4;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class PlayerManager : MonoBehaviour
         playerHPText.text = "HP:" + playerHP;
         if (isGameOver)
         {
-            SceneManager.LoadScene("Jogo");
+            SceneManager.LoadScene("ManInTheMaze");
            // Debug.Log(player.transform.position);
             playerHP = 100;
         }
@@ -73,6 +74,7 @@ public class PlayerManager : MonoBehaviour
             player.transform.position = respawnPoint_2.transform.position;
             player.GetComponent<CharacterController>().enabled = true;
             animator = GetComponent<Animator>();
+            //porta.GetComponent<Animator> ().Play ("abrir");
         }
         if(other.CompareTag("colectavel_2"))
         {
@@ -87,8 +89,58 @@ public class PlayerManager : MonoBehaviour
             player.GetComponent<CharacterController>().enabled = true;
             animator = GetComponent<Animator>();
         }
+        if (other.CompareTag("Televisao_acionador"))
+        {
+      
+            characterController = GetComponent<CharacterController>();
+            player.GetComponent<CharacterController>().enabled = false;
+            player.transform.position = respawnPoint_4.transform.position;
+            player.GetComponent<CharacterController>().enabled = true;
+            animator = GetComponent<Animator>();
+            
+        }
+        if (other.CompareTag("Slide_door"))
+        {
+            other.GetComponent<AudioSource>().Play();
+
+        }
+        if (other.CompareTag("Som_Natureza"))
+        {
+            other.GetComponent<AudioSource>().Play();
+
+        }
+        if (other.CompareTag("biblio_som"))
+        {
+            other.GetComponent<AudioSource>().Play();
+    
+    }
+        if (other.CompareTag("space_sound"))
+        {
+            other.GetComponent<AudioSource>().Play();
+            }
+} 
+    private void OnTriggerExit(Collider other){
+
+    
+         if (other.CompareTag("Door_ranger"))
+        {
+            other.GetComponent<AudioSource>().Play();
+            }
+        
+        if (other.CompareTag("Som_Natureza")){
+
+            other.GetComponent<AudioSource>().Stop();
+
+        }
+        if (other.CompareTag("biblio_som")){
+
+            other.GetComponent<AudioSource>().Stop();
     }
 
+        if (other.CompareTag("space_sound"))
+        {
+            other.GetComponent<AudioSource>().Stop();
+            }
   /*private void OnCollisionEnter(Collision other)
     {
         if (proj.gameObject.CompareTag("inimigo"))
@@ -98,4 +150,6 @@ public class PlayerManager : MonoBehaviour
 
     }*/
 
+
+}
 }

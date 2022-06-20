@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/Jogo.unity
     guid: fe28eaf65c519f14bb6731254a619499
+  - enabled: 1
+    path: Assets/Cenas/PauseMenu.unity
+    guid: e47334d69591e6f41a31da14282f726f
+  - enabled: 1
+    path: Assets/Cenas/MenuPrincipal.unity
+    guid: 3f55fcf27d4ae63458a4014d2bdd30ca
   m_configObjects: {}
